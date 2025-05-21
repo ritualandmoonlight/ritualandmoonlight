@@ -103,10 +103,16 @@
       text-decoration: underline;
     }
 
+    .content-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
     @media (min-width: 900px) {
-  .book-grid {
-    grid-template-columns: repeat(3, 1fr); /* Large screens: 3 per row */
-  }
+      .book-grid {
+      grid-template-columns: repeat(3, 1fr); /* Large screens: 3 per row */
+    }
 }
   </style>
 </head>
@@ -117,7 +123,7 @@
     <p class="subtitle">A quiet space for healing words, sacred pages, and gentle offerings.<br>Books. Blessings. Stillness.</p>
 
     <h2 class="section-title">Explore Our Books</h2>
-
+  <div class="content-section">
     <div class="book-grid">
       <a href="https://www.amazon.in/dp/B0F8XXGG8Q" target="_blank" class="book-card">
         <img src="/yoga-door.jpg" alt="An Open Door to Yoga">
@@ -139,7 +145,7 @@
         <img src="/blessing-book.jpg" alt="The Blessing Book">
         <div class="book-title-hover">The Blessing Book</div>
       </a>
-
+  </div>
 
     <footer>
       <p>For blessings, inquiries, or collaboration:<br>
