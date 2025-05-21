@@ -1,57 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Ritual and Moonlight</title>
-  <style>
-    body {
-      font-family: 'Georgia', serif;
-      background-color: #fefaf6;
-      color: #4c3f36;
-      text-align: center;
-      padding: 80px 20px;
-    }
-    h1 {
-      font-size: 2.8em;
-      margin-bottom: 0.2em;
-    }
-    p {
-      font-size: 1.2em;
-      max-width: 650px;
-      margin: 20px auto;
-      line-height: 1.6;
-    }
-    .book-links {
-      margin-top: 40px;
-    }
-    .book-links a {
-      display: inline-block;
-      margin: 10px;
-      font-size: 1em;
-      text-decoration: none;
-      color: #5a463d;
-      border: 1px solid #ddd;
-      padding: 10px 16px;
-      border-radius: 6px;
-      background: #fffdfc;
-      transition: background 0.3s;
-    }
-    .book-links a:hover {
-      background: #f3eae4;
-    }
-  </style>
-</head>
-<body>
-  <h1>🌙 Ritual and Moonlight</h1>
- <p>A quiet space for healing words, sacred pages, and gentle offerings.</p>
-  <p>Books. Blessings. Stillness.</p>
+<style>
+  .book-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 40px;
+  }
 
-  <div class="book-links">
-    <h2>📚 Explore Our Books</h2>
-    <a href="https://www.amazon.in/dp/B0F8VHY58Y" target="_blank">The Upanishadic Goodbye: A Quiet Offering of Presence, Love, and Letting Go</a>
-    <a href="https://www.amazon.in/dp/B0F8R8BX15" target="_blank">108 Sanskrit Mantras for Curious Souls: Soft mantras with English meanings—no chanting, no pressure, just peace</a>
-    <a href="https://www.amazon.in/dp/B0F91FTL9N" target="_blank">The Blessing Book: Upanishadic Blessings for Every Part of Life</a>
-    <a href="https://www.amazon.in/dp/B0F8XXGG8Q" target="_blank">An Open Door to Yoga: Seven Sacred Paths for the Curious Seeker</a>
-    <a href="https://www.amazon.in/dp/B0F8QWHRSZ" target="_blank">Hindu Calendar 2025–2026 (North Indian Edition): Spiritually Aesthetic Lunar Companion with Mantras, Festivals & Tithis</a>
-</body>
-</html>
+  .book-grid a {
+    text-decoration: none;
+  }
+
+  .book-grid img {
+    width: 180px;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease;
+  }
+
+  .book-grid img:hover {
+    transform: scale(1.03);
+  }
+</style>
+
+<h2>📚 Explore Our Books</h2>
+<div class="book-grid">
+  <a href="https://www.amazon.in/dp/B0F8VHY58Y" target="_blank">
+    <img src="images/upanishadic-goodbye.jpg" alt="The Upanishadic Goodbye">
+  </a>
+  <a href="https://www.amazon.in/dp/B0F8R8BX15" target="_blank">
+    <img src="images/mantras-curious-souls.jpg" alt="108 Sanskrit Mantras for Curious Souls">
+  </a>
+  <a href="https://
