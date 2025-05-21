@@ -118,34 +118,94 @@
 </head>
 <body>
   <div class="container">
-    <div style="font-size: 2em;">🌙</div>
-    <h1>Ritual and Moonlight</h1>
-    <p class="subtitle">A quiet space for healing words, sacred pages, and gentle offerings.<br>Books. Blessings. Stillness.</p>
-
-    <h2 class="section-title">Amazon India</h2>
-  <div class="content-section">
-    <div class="book-grid">
-      <a href="https://www.amazon.in/dp/B0F8XXGG8Q" target="_blank" class="book-card">
-        <img src="/yoga-door.jpg" alt="An Open Door to Yoga">
-        <div class="book-title-hover">An Open Door to Yoga</div>
-      </a>
-      <a href="https://www.amazon.in/dp/B0F8VHY58Y" target="_blank" class="book-card">
-        <img src="/upanishadic-goodbye.jpg" alt="The Upanishadic Goodbye">
-        <div class="book-title-hover">The Upanishadic Goodbye</div>
-      </a>
-      <a href="https://www.amazon.in/dp/B0F8QWHRSZ" target="_blank" class="book-card">
-        <img src="hindu-calendar.jpg" alt="Hindu Calendar">
-        <div class="book-title-hover">Hindu Calendar 2025–2026</div>
-      </a>
-      <a href="https://www.amazon.in/dp/B0F8R8BX15" target="_blank" class="book-card">
-        <img src="/mantras-curious-souls.jpg" alt="108 Sanskrit Mantras for Curious Souls">
-        <div class="book-title-hover">108 Healing Mantras</div>
-      </a>
-      <a href="https://www.amazon.in/dp/B0F91FTL9N" target="_blank" class="book-card">
-        <img src="/blessing-book.jpg" alt="The Blessing Book">
-        <div class="book-title-hover">The Blessing Book</div>
-      </a>
+    <!-- Place this inside <body> right after <div class="container"> -->
+    <div style="margin-bottom: 30px;">
+      <label for="region-select" style="font-family: 'Inter'; font-size: 1em;">🌍 Choose Your Region:</label>
+      <select id="region-select" onchange="updateBookLinks()" style="margin-left: 10px; font-family: 'Inter'; font-size: 1em;">
+        <option value="in">India 🇮🇳</option>
+        <option value="us">US 🇺🇸</option>
+        <option value="uk">UK 🇬🇧</option>
+      </select>
     </div>
+
+<script>
+const books = [
+  {
+    title: "An Open Door to Yoga",
+    image: "/yoga-door.jpg",
+    links: {
+      in: "https://www.amazon.in/dp/B0F8XXGG8Q",
+      us: "https://www.amazon.com/dp/B0F8XXGG8Q",
+      uk: "https://www.amazon.co.uk/dp/B0F8XXGG8Q"
+    }
+  },
+  {
+    title: "The Upanishadic Goodbye",
+    image: "/upanishadic-goodbye.jpg",
+    links: {
+      in: "https://www.amazon.in/dp/B0F8VHY58Y",
+      us: "https://www.amazon.com/dp/B0F8VHY58Y",
+      uk: "https://www.amazon.co.uk/dp/B0F8VHY58Y"
+    }
+  },
+  {
+    title: "Hindu Calendar 2025–2026",
+    image: "hindu-calendar.jpg",
+    links: {
+      in: "https://www.amazon.in/dp/B0F8QWHRSZ",
+      us: "https://www.amazon.com/dp/B0F8QWHRSZ",
+      uk: "https://www.amazon.co.uk/dp/B0F8QWHRSZ"
+    }
+  },
+  {
+    title: "108 Healing Mantras",
+    image: "/mantras-curious-souls.jpg",
+    links: {
+      in: "https://www.amazon.in/dp/B0F8R8BX15",
+      us: "https://www.amazon.com/dp/B0F8R8BX15",
+      uk: "https://www.amazon.co.uk/dp/B0F8R8BX15"
+    }
+  },
+  {
+    title: "The Blessing Book",
+    image: "/blessing-book.jpg",
+    links: {
+      in: "https://www.amazon.in/dp/B0F91FTL9N",
+      us: "https://www.amazon.com/dp/B0F91FTL9N",
+      uk: "https://www.amazon.co.uk/dp/B0F91FTL9N"
+    }
+  }
+];
+
+function updateBookLinks() {
+  const region = document.getElementById('region-select').value;
+  const grid = document.getElementById('book-grid');
+  grid.innerHTML = ''; // Clear existing content
+
+  books.forEach(book => {
+    const card = document.createElement('a');
+    card.href = book.links[region];
+    card.target = '_blank';
+    card.className = 'book-card';
+
+    const img = document.createElement('img');
+    img.src = book.image;
+    img.alt = book.title;
+
+    const hoverTitle = document.createElement('div');
+    hoverTitle.className = 'book-title-hover';
+    hoverTitle.textContent = book.title;
+
+    card.appendChild(img);
+    card.appendChild(hoverTitle);
+    grid.appendChild(card);
+  });
+}
+
+// Load default region (India)
+window.onload = updateBookLinks;
+</script>
+
       <p>For blessings, inquiries, or collaboration:<br>
       <a href="mailto:ritualandmoonlight@gmail.com">ritualandmoonlight@gmail.com</a></p>
       <p>© 2025 Ritual and Moonlight — A sacred imprint for the quietly brave.</p>
