@@ -127,83 +127,88 @@
         <option value="uk">UK 🇬🇧</option>
       </select>
     </div>
+    <div style="font-size: 2em;">🌙</div>
+    <h1>Ritual and Moonlight</h1>
+    <p class="subtitle">A quiet space for healing words, sacred pages, and gentle offerings.<br>Books. Blessings. Stillness.</p>
 
-<script>
-const books = [
-  {
-    title: "An Open Door to Yoga",
-    image: "/yoga-door.jpg",
-    links: {
-      in: "https://www.amazon.in/dp/B0F8XXGG8Q",
-      us: "https://www.amazon.com/dp/B0F8XXGG8Q",
-      uk: "https://www.amazon.co.uk/dp/B0F8XXGG8Q"
-    }
-  },
-  {
-    title: "The Upanishadic Goodbye",
-    image: "/upanishadic-goodbye.jpg",
-    links: {
-      in: "https://www.amazon.in/dp/B0F8VHY58Y",
-      us: "https://www.amazon.com/dp/B0F8VHY58Y",
-      uk: "https://www.amazon.co.uk/dp/B0F8VHY58Y"
-    }
-  },
-  {
-    title: "Hindu Calendar 2025–2026",
-    image: "hindu-calendar.jpg",
-    links: {
-      in: "https://www.amazon.in/dp/B0F8QWHRSZ",
-      us: "https://www.amazon.com/dp/B0F8QWHRSZ",
-      uk: "https://www.amazon.co.uk/dp/B0F8QWHRSZ"
-    }
-  },
-  {
-    title: "108 Healing Mantras",
-    image: "/mantras-curious-souls.jpg",
-    links: {
-      in: "https://www.amazon.in/dp/B0F8R8BX15",
-      us: "https://www.amazon.com/dp/B0F8R8BX15",
-      uk: "https://www.amazon.co.uk/dp/B0F8R8BX15"
-    }
-  },
-  {
-    title: "The Blessing Book",
-    image: "/blessing-book.jpg",
-    links: {
-      in: "https://www.amazon.in/dp/B0F91FTL9N",
-      us: "https://www.amazon.com/dp/B0F91FTL9N",
-      uk: "https://www.amazon.co.uk/dp/B0F91FTL9N"
-    }
-  }
-];
-
-function updateBookLinks() {
-  const region = document.getElementById('region-select').value;
-  const grid = document.getElementById('book-grid');
-  grid.innerHTML = ''; // Clear existing content
-
-  books.forEach(book => {
-    const card = document.createElement('a');
-    card.href = book.links[region];
-    card.target = '_blank';
-    card.className = 'book-card';
-
-    const img = document.createElement('img');
-    img.src = book.image;
-    img.alt = book.title;
-
-    const hoverTitle = document.createElement('div');
-    hoverTitle.className = 'book-title-hover';
-    hoverTitle.textContent = book.title;
-
-    card.appendChild(img);
-    card.appendChild(hoverTitle);
-    grid.appendChild(card);
-  });
-}
-
-// Load default region (India)
-window.onload = updateBookLinks;
+    <h2 class="section-title">Amazon India</h2>
+  <div class="content-section">
+    <div class="book-grid">
+      const books = [
+        {
+          title: "An Open Door to Yoga",
+          image: "/yoga-door.jpg",
+          links: {
+            in: "https://www.amazon.in/dp/B0F8XXGG8Q",
+            us: "https://www.amazon.com/dp/B0F8XXGG8Q",
+            uk: "https://www.amazon.co.uk/dp/B0F8XXGG8Q"
+          }
+        },
+        {
+          title: "The Upanishadic Goodbye",
+          image: "/upanishadic-goodbye.jpg",
+          links: {
+            in: "https://www.amazon.in/dp/B0F8VHY58Y",
+            us: "https://www.amazon.com/dp/B0F8VHY58Y",
+            uk: "https://www.amazon.co.uk/dp/B0F8VHY58Y"
+          }
+        },
+        {
+          title: "Hindu Calendar 2025–2026",
+          image: "hindu-calendar.jpg",
+          links: {
+            in: "https://www.amazon.in/dp/B0F8QWHRSZ",
+            us: "https://www.amazon.com/dp/B0F8QWHRSZ",
+            uk: "https://www.amazon.co.uk/dp/B0F8QWHRSZ"
+          }
+        },
+        {
+          title: "108 Healing Mantras",
+          image: "/mantras-curious-souls.jpg",
+          links: {
+            in: "https://www.amazon.in/dp/B0F8R8BX15",
+            us: "https://www.amazon.com/dp/B0F8R8BX15",
+            uk: "https://www.amazon.co.uk/dp/B0F8R8BX15"
+          }
+        },
+        {
+          title: "The Blessing Book",
+          image: "/blessing-book.jpg",
+          links: {
+            in: "https://www.amazon.in/dp/B0F91FTL9N",
+            us: "https://www.amazon.com/dp/B0F91FTL9N",
+            uk: "https://www.amazon.co.uk/dp/B0F91FTL9N"
+          }
+        }
+      ];
+      
+      function updateBookLinks() {
+        const region = document.getElementById('region-select').value;
+        const grid = document.getElementById('book-grid');
+        grid.innerHTML = ''; // Clear existing content
+      
+        books.forEach(book => {
+          const card = document.createElement('a');
+          card.href = book.links[region];
+          card.target = '_blank';
+          card.className = 'book-card';
+      
+          const img = document.createElement('img');
+          img.src = book.image;
+          img.alt = book.title;
+      
+          const hoverTitle = document.createElement('div');
+          hoverTitle.className = 'book-title-hover';
+          hoverTitle.textContent = book.title;
+      
+          card.appendChild(img);
+          card.appendChild(hoverTitle);
+          grid.appendChild(card);
+        });
+      }
+      
+      // Load default region (India)
+      window.onload = updateBookLinks;
 </script>
 
       <p>For blessings, inquiries, or collaboration:<br>
