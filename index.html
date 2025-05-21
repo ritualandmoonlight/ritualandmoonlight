@@ -1,47 +1,146 @@
-<style>
-  body {
-  background: linear-gradient(to bottom, #fefaf6, #f6f2eb);
-  }
-  .book-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 24px;
-    margin-top: 40px;
-  }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ritual and Moonlight</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'EB Garamond', serif;
+      background: linear-gradient(to bottom, #fefaf6, #f6f2eb);
+      color: #3e332c;
+      text-align: center;
+    }
 
-  .book-grid a {
-    text-decoration: none;
-  }
+    .container {
+      max-width: 900px;
+      margin: 80px auto;
+      padding: 0 20px;
+    }
 
-  .book-grid img {
-    width: 180px;
-    height: auto;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.06);
-    transition: transform 0.3s ease;
-  }
+    h1 {
+      font-size: 2.8em;
+      margin-bottom: 0.2em;
+    }
 
-  .book-grid img:hover {
-    transform: scale(1.03);
-  }
-</style>
+    p.subtitle {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.1em;
+      color: #5a4b41;
+      margin-bottom: 40px;
+    }
 
-<h2>📚 Explore Our Books</h2>
-<div class="book-grid">
-  <a href="https://www.amazon.in/dp/B0F8VHY58Y" target="_blank">
-    <img src="/Kindle E-Book Cover (5).jpg" alt="The Upanishadic Goodbye">
-  </a>
-    <a href="https://www.amazon.in/dp/B0F91FTL9N" target="_blank">
-    <img src="/Kindle E-Book Cover (11).jpg" alt="The Blessing Book">
-  </a>
-  <a href="https://www.amazon.in/dp/B0F8XXGG8Q" target="_blank">
-    <img src="/Kindle E-Book Cover (6).jpg" alt="An Open Door to Yoga">
-  </a>
-  <a href="https://www.amazon.in/dp/B0F8R8BX15" target="_blank">
-    <img src="/108.jpg" alt="108 Sanskrit Mantras for Curious Souls">
-  </a>
-   <a href="https://www.amazon.in/dp/B0F8QWHRSZ" target="_blank">
-    <img src="/Kindle E-Book Cover.png" alt="Hindu Calendar 2025–2026">
-  </a>
+    h2.section-title {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.5em;
+      margin: 60px 0 20px;
+    }
+
+    .book-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 28px;
+    }
+
+    .book-card {
+      position: relative;
+      width: 160px;
+      transition: transform 0.3s ease;
+    }
+
+    .book-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+    }
+
+    .book-card:hover {
+      transform: scale(1.03);
+    }
+
+    .book-title-hover {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      padding: 8px 6px;
+      font-size: 0.9em;
+      background: rgba(255, 250, 240, 0.92);
+      font-family: 'Inter', sans-serif;
+      color: #4c3f36;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+
+    .book-card:hover .book-title-hover {
+      opacity: 1;
+    }
+
+    footer {
+      margin-top: 80px;
+      font-size: 0.9em;
+      color: #99887e;
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+    }
+
+    footer a {
+      color: #7a665a;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      .book-card {
+        width: 45%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div style="font-size: 2em;">🌙</div>
+    <h1>Ritual and Moonlight</h1>
+    <p class="subtitle">A quiet space for healing words, sacred pages, and gentle offerings.<br>Books. Blessings. Stillness.</p>
+
+    <h2 class="section-title">📚 Explore Our Books</h2>
+
+    <div class="book-grid">
+      <a href="https://www.amazon.in/dp/B0F8VHY58Y" target="_blank" class="book-card">
+        <img src="images/upanishadic-goodbye.jpg" alt="The Upanishadic Goodbye">
+        <div class="book-title-hover">The Upanishadic Goodbye</div>
+      </a>
+      <a href="https://www.amazon.in/dp/B0F8R8BX15" target="_blank" class="book-card">
+        <img src="images/mantras-curious-souls.jpg" alt="108 Sanskrit Mantras for Curious Souls">
+        <div class="book-title-hover">108 Healing Mantras</div>
+      </a>
+      <a href="https://www.amazon.in/dp/B0F91FTL9N" target="_blank" class="book-card">
+        <img src="images/blessing-book.jpg" alt="The Blessing Book">
+        <div class="book-title-hover">The Blessing Book</div>
+      </a>
+      <a href="https://www.amazon.in/dp/B0F8XXGG8Q" target="_blank" class="book-card">
+        <img src="images/yoga-door.jpg" alt="An Open Door to Yoga">
+        <div class="book-title-hover">An Open Door to Yoga</div>
+      </a>
+      <a href="https://www.amazon.in/dp/B0F8QWHRSZ" target="_blank" class="book-card">
+        <img src="images/hindu-calendar.jpg" alt="Hindu Calendar">
+        <div class="book-title-hover">Hindu Calendar 2025–2026</div>
+      </a>
+    </div>
+
+    <footer>
+      <p>For blessings, inquiries, or collaboration:<br>
+      <a href="mailto:ritualandmoonlight@gmail.com">ritualandmoonlight@gmail.com</a></p>
+      <p>© 2025 Ritual and Moonlight — A sacred imprint for the quietly brave.</p>
+    </footer>
+  </div>
+</body>
+</html>
